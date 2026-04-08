@@ -73,16 +73,19 @@ also includes data preprocessing, training, evaluation, and translation utils
 the `imgs/` folder contains the training and evaluation result figures produced by the notebook and training scripts
 
 - **Loss curves**: `imgs/loss-curves.png`
+  ![Loss curves](imgs/loss-curves.png)
   - shows training and validation loss for three hyperparameter configurations
   - all models steadily reduce loss across epochs, and the largest configuration (6 layers, 8 heads, `d_model=512`, `d_ff=1024`) achieves the lowest final loss
   - the validation loss follows the training loss closely, indicating the model is learning without strong overfitting
 
 - **Maximum BLEU scores**: `imgs/max-bleu.png`
+  ![Maximum BLEU scores](imgs/max-bleu.png)
   - compares the best BLEU score reached across epochs for each hyperparameter setting
   - the largest model configuration again performs best, reaching about `0.31` BLEU
   - smaller models with fewer layers, heads, or hidden units score lower, showing model capacity matters for translation quality
 
 - **ROUGE-L score curves**: `imgs/rouge-score.png`
+  ![ROUGE-L score curves](imgs/rouge-score.png)
   - tracks ROUGE-L score improvements across epochs for each config
   - all three setups improve over time, with the larger model achieving the highest scores
   - this confirms that the same trends from BLEU also appear in a different quality metric.
